@@ -65,6 +65,7 @@ end
 #INTERFACE--------------------------------------------#
 
 def config_interface
+	system("service network-manager stop")
 	system("echo 1 > /proc/sys/net/ipv4/ip_forward")
 	if @bssid != "" then system("ifconfig #@interface down")
 	system("ifconfig #@interface hw ether #@bssid")	
