@@ -39,7 +39,7 @@ def install_all
 end
 
 def install_packages
-	system("xterm -e apt-get install libssl-dev libnl-dev bridge-utils hostapd patch dnsmasq")
+	system("xterm -e apt-get install libssl-dev bridge-utils hostapd patch dnsmasq")
 end
 
 def config_netmanager
