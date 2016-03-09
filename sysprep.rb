@@ -43,7 +43,7 @@ def install_packages
 end
 
 def config_netmanager
-	system("killall dnsmasq && /etc/init.d/dnsmasq start && /etc/init.d/network-manager restart")
+	system("killall dnsmasq && service dnsmasq start && service network-manager restart")
 end
 
 def install_radius
