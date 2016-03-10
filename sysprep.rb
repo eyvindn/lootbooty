@@ -50,7 +50,7 @@ def install_radius
 	Dir.chdir("installers")
 	system("xterm -e tar -jxvf freeradius-server-2.2.9.tar.bz2")
 	Dir.chdir("freeradius-server-2.2.9")
-	system("cp ../../patches/PuNk1n.patch .")
+	system("cp ../../patches/eyvind.patch .")
 	system("patch -p1 < eyvind.patch")
 	system("xterm -e ./configure && xterm -e make && xterm -e make install && xterm -e ldconfig")
 	Dir.chdir("../../")
