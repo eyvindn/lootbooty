@@ -20,7 +20,7 @@ diff -uNr freeradius-server-2.2.9/src/modules/rlm_eap/types/rlm_eap_mschapv2/rlm
  	}
  
 diff -uNr freeradius-server-2.2.9/src/modules/rlm_pap/rlm_pap.c free-booty/src/modules/rlm_pap/rlm_pap.c
---- freeradius-server-2.2.9/src/modules/rlm_pap/rlm_pap_patched.c	Wed Sep 30 16:37:13 2015
+--- freeradius-server-2.2.9/src/modules/rlm_pap/rlm_pap.c	Wed Sep 30 16:37:13 2015
 +++ /Users/eyvind/Documents/dev/ruby/lootbooty/installers/freeradius-server-2.2.9/src/modules/rlm_pap/rlm_pap.c	Thu Mar 10 01:11:49 2016
 @@ -601,7 +601,7 @@
  
