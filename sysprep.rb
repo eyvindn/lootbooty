@@ -48,10 +48,10 @@ end
 
 def install_radius
 	Dir.chdir("installers")
-	system("xterm -e tar -xvf freeradius-server-2.1.12.tar.gz")
-	Dir.chdir("freeradius-server-2.1.12")
+	system("xterm -e tar -xvf freeradius-server-2.2.9.tar.gz")
+	Dir.chdir("freeradius-server-2.2.9")
 	system("cp ../../patches/PuNk1n.patch .")
-	system("patch -p1 < PuNk1n.patch")
+	system("patch -p1 < eyvind.patch")
 	system("xterm -e ./configure && xterm -e make && xterm -e make install && xterm -e ldconfig")
 	Dir.chdir("../../")
 end	
@@ -67,8 +67,8 @@ def uninstall_all
 end
 
 def uninstall_radius
-	if Dir.exists?("/usr/local/etc/raddb") or Dir.exists?("installers/freeradius-server-2.1.12/") then
-	system("rm -rf installers/freeradius-server-2.1.12")
+	if Dir.exists?("/usr/local/etc/raddb") or Dir.exists?("installers/freeradius-server-2.2.9/") then
+	system("rm -rf installers/freeradius-server-2.2.9")
 	system("rm -rf /usr/local/etc/raddb")
 	system("rm -rf /usr/local/sbin/rc.radiusd")
 	system("rm -rf /usr/local/sbin/radiusd")
