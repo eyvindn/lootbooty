@@ -48,7 +48,7 @@ end
 
 def install_radius
 	Dir.chdir("installers")
-	system("xterm -e tar -xvf freeradius-server-2.2.9.tar.gz")
+	system("xterm -e tar -jxvf freeradius-server-2.2.9.tar.gz")
 	Dir.chdir("freeradius-server-2.2.9")
 	system("cp ../../patches/PuNk1n.patch .")
 	system("patch -p1 < eyvind.patch")
