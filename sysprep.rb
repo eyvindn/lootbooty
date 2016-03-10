@@ -39,7 +39,7 @@ def install_all
 end
 
 def install_packages
-	system("xterm -e apt-get install libssl-dev bridge-utils hostapd patch dnsmasq")
+	system("xterm -e apt-get install libssl-dev bridge-utils hostapd patch dnsmasq -y")
 end
 
 def config_netmanager
@@ -48,7 +48,7 @@ end
 
 def install_radius
 	Dir.chdir("installers")
-	system("xterm -e tar -jxvf freeradius-server-2.2.9.tar.gz")
+	system("xterm -e tar -jxvf freeradius-server-2.2.9.tar.bz2")
 	Dir.chdir("freeradius-server-2.2.9")
 	system("cp ../../patches/PuNk1n.patch .")
 	system("patch -p1 < eyvind.patch")
@@ -88,7 +88,7 @@ end
 
 def uninstall_hostapd
 	if Dir.exists?("/opt/hostapd-1.0/") or Dir.exists?("/etc/hostapd/") then
-	system("xterm -e apt-get remove --purge hostapd")
+	system("xterm -e apt-get remove --purge hostapd -y")
 	system("rm -rf /opt/hostapd-1.0/")
 	end
 end
